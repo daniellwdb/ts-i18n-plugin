@@ -1,0 +1,56 @@
+{
+  "name": "ts-i18n-plugin",
+  "version": "1.0.0",
+  "description": "TypeScript Language Service Plugin to provide autocompletion for i18n strings.",
+  "keywords": [
+    "i18n",
+    "type-safe",
+    "language-service-plugin",
+    "npm-package",
+    "typescript",
+    "localisation"
+  ],
+  "homepage": "https://github.com/daniellwdb/ts-i18n-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/daniellwdb/ts-i18n-plugin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniellwdb/ts-i18n-plugin.git"
+  },
+  "license": "MIT",
+  "author": "pandaniell",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "build:watch": "rimraf ./dist && tsc -w",
+    "postinstall": "husky install",
+    "prepublish": "npm run build"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": false
+  },
+  "dependencies": {
+    "glob": "^7.1.6",
+    "vscode-json-languageservice": "^4.0.0",
+    "vscode-uri": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/node": "^14.14.16",
+    "@types/react": "^17.0.0",
+    "husky": "^5.0.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  }
+}

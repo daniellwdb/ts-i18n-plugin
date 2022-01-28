@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "../../dist",
+        "baseDir": "./locales",
+        "primaryLocale": "en",
+        "callExpressionId": "useTranslation",
+        "bindingElementId": "t"
+      }
+    ]
+  }
+}
